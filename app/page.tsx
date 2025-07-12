@@ -31,6 +31,14 @@ export default function App() {
     });
   }
 
+  const [envSecrets, setEnvSecrets] = useState<{ envMain: string; secretMain: string } | null>(null);
+
+  useEffect(() => {
+    fetch("/api/get-env-secrets")
+      .then((res) => res.json())
+      .then((data) => setEnvSecrets(data));
+  }, []);
+
   return (
     <main>
       <h1>My todos</h1>
@@ -41,8 +49,8 @@ export default function App() {
         ))}
       </ul>
       <div>
-        <strong>ENV_MAIN:</strong> {process.env.ENV_MAIN || "Not set"}<br />
-        <strong>SECRET_MAIN:</strong> {process.env.SECRET_MAIN || "Not set"}
+        <strong>ENV_MAIN:</strong> {envSecrets?.envMain || "Loading..."}<br />
+        <strong>SECRET_MAIN:</strong> {envSecrets?.secretMain || "Loading..."}
       </div>
       <div>
         <strong>Version:</strong> {process.env.NEXT_PUBLIC_VERSION || "1.0.0"}
