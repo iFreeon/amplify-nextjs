@@ -45,6 +45,9 @@ export default function App() {
         <strong>SECRET_MAIN:</strong> {process.env.SECRET_MAIN || "Not set"}
       </div>
       <div>
+        <strong>Version:</strong> {process.env.NEXT_PUBLIC_VERSION || "1.0.0"}
+      </div>
+      <div>
         🥳 App successfully hosted. Try creating a new todo.
         <br />
         <a href="https://docs.amplify.aws/nextjs/start/quickstart/nextjs-app-router-client-components/">
