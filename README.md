@@ -3,6 +3,9 @@ Created from template: https://github.com/aws-samples/amplify-next-template
 1. Create environment variables in the Amplify Console
 2. Add secrets in the Secrets Manager
 
+## References
+- [AWS Amplify Backend Resources](https://docs.amplify.aws/nextjs/build-a-backend/functions/environment-variables-and-secrets/#secrets)
+
 ## AWS Amplify Next.js (App Router) Starter Template
 
 This repository provides a starter template for creating applications using Next.js (App Router) and AWS Amplify, emphasizing easy setup for authentication, API, and database capabilities.
