@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { defineFunction, secret } from '@aws-amplify/backend';
-export const dynamic = 'force-dynamic';
+// export const dynamic = 'force-dynamic';
 
 export async function GET() {
   // Call Amplify backend API (replace with real call if needed)
