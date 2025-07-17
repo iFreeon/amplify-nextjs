@@ -1,11 +1,18 @@
 import { NextResponse } from 'next/server';
 import { defineFunction, secret } from '@aws-amplify/backend';
+export const dynamic = 'force-dynamic';
 
 export async function GET() {
   // Call Amplify backend API (replace with real call if needed)
   // For demo, fetch from process.env
   const envMain = process.env.ENV_MAIN || 'Not set';
-  const secretMain = process.env.SECRET_MAIN || 'Not set';
+  let secretMain: string = 'Not set';
+  try {
+    const s = secret('SECRET_MAIN');
+    secretMain = typeof s === 'object' && 'value' in s ? s.value : 'Not set';
+  } catch {
+    secretMain = 'Not set';
+  }
 
   return NextResponse.json({ envMain, secretMain });
 }
