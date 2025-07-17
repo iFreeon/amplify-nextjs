@@ -53,7 +53,7 @@ export default function App() {
         <strong>SECRET_MAIN:</strong> {envSecrets?.secretMain || "Loading..."}
       </div>
       <div>
-        <strong>Version:</strong> {process.env.NEXT_PUBLIC_VERSION || "1.0.0"}
+        <strong>Version:</strong> {process.env.NEXT_PUBLIC_VERSION || "1.0.1"}
       </div>
       <div>
         🥳 App successfully hosted. Try creating a new todo.
