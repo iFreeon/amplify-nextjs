@@ -9,7 +9,7 @@ export async function GET() {
   let secretMain: string = 'Not set';
   try {
     const s = secret('SECRET_MAIN');
-    secretMain = typeof s === 'object' && 'value' in s ? s.value : 'Not set';
+    secretMain = typeof s === 'object' && 'value' in s ? String(s.value) : 'Not set';
   } catch {
     secretMain = 'Not set';
   }
