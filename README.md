@@ -1,4 +1,7 @@
-# Sample App to fix env/secrets
+# AWS Amplify Next.js (App Router) Testing
+This repository is designed to help you test and validate your Next.js application with AWS Amplify, focusing on environment variables and secrets management.
+
+## Sample App to fix env/secrets
 Created from template: https://github.com/aws-samples/amplify-next-template
 1. Create environment variables in the Amplify Console
 2. Add secrets in the Secrets Manager
@@ -6,13 +9,10 @@ Created from template: https://github.com/aws-samples/amplify-next-template
 ## References
 - [AWS Amplify Backend Resources](https://docs.amplify.aws/nextjs/build-a-backend/functions/environment-variables-and-secrets/#secrets)
 
-## AWS Amplify Next.js (App Router) Starter Template
-
-This repository provides a starter template for creating applications using Next.js (App Router) and AWS Amplify, emphasizing easy setup for authentication, API, and database capabilities.
-
-## Overview
-
-This template equips you with a foundational Next.js application integrated with AWS Amplify, streamlined for scalability and performance. It is ideal for developers looking to jumpstart their project with pre-configured AWS services like Cognito, AppSync, and DynamoDB.
+## Run Sandbox
+```
+ npx ampx sandbox
+```
 
 ## Features
 
